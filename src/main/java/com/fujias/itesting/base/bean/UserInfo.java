@@ -7,10 +7,5 @@ import lombok.Setter;
 @Setter
 public abstract class UserInfo extends BaseInfo {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
 	
 }
