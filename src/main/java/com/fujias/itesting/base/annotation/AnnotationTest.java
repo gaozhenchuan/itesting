@@ -9,7 +9,7 @@ public class AnnotationTest {
      */
     public static void main(String[] args) {
         
-        FruitInfoUtil.getFruitInfo(Apple.class);
+//        FruitInfoUtil.getFruitInfo(Apple.class);
         
     }
 
