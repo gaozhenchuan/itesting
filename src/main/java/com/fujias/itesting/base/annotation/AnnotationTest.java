@@ -1,7 +1,5 @@
 package com.fujias.itesting.base.annotation;
 
-import java.lang.reflect.Field;
-
 public class AnnotationTest {
 
 	  /**
