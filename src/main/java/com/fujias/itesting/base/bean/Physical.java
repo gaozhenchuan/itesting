@@ -2,7 +2,7 @@ package com.fujias.itesting.base.bean;
 
 public class Physical {
 
-    // セッションID
+    // sessionID
     private String sessionID = null;
     
     // PCipAddress
@@ -11,7 +11,7 @@ public class Physical {
     // macAddress
     private String macAddress = null;
     
-    // 検証用キー
+    // accessToken
     private String accessToken  = null;
     
     // ヘルプファイルマッピング

@@ -1,7 +1,5 @@
 package com.fujias.itesting.server;
 
-
-
 import javax.jws.WebService;
 
 /**
@@ -13,7 +11,6 @@ import javax.jws.WebService;
  * @date 2012-7-6
  * @version 1.0
  */
-@SuppressWarnings("restriction")
 @WebService(endpointInterface = "com.fujias.itesting.server.IHelloService", serviceName = "HelloService")
 public class HelloServiceImpl implements IHelloService {
 
