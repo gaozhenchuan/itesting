@@ -26,9 +26,9 @@
         <div class="container" style="width: 300px;margin-top: 20px">
             <form action="#">
                 <div class="input-group form-group">
-                    <lable class="control-label col-lg-2">姓名：</lable>
+                    <div class="control-label col-lg-2">姓名：</div>
                     <input type="text" class="form-control">
-                    <lable class="control-label col-lg-2">密码：</lable>
+                    <div class="control-label col-lg-2">密码：</div>
                     <input type="text" class="form-control">
                 </div>
             </form>

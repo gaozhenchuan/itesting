@@ -12,7 +12,6 @@ import javax.jws.WebService;
  * @date 2012-7-6
  * @version 1.0
  */
-@SuppressWarnings("restriction")
 @WebService
 public interface IHelloService {
     public String sayHello(String username);

@@ -15,4 +15,10 @@
 
     <jaxws:endpoint id="helloService"
      implementor="com.fujias.itesting.server.HelloServiceImpl" address="/helloService" />
+     
+     <!-- <bean id="clientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+                            <property name="serviceClass" value="com.fujias.itesting.server.HelloService"/>
+                            <property name="address"
+                                              value="http://localhost:8080/itesting/webservice/helloService"/>
+                  </bean> -->
 </beans>
