@@ -27,6 +27,7 @@
     </bean>
     
     <import resource="spring-mybatis.xml"/>
+    <import resource="spring-locale.xml"/>
     <import resource="spring-mvc.xml"/>
     
 </beans>

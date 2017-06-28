@@ -18,8 +18,15 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.RequestContextUtils;
 
-import com.fujias.itesting.base.common.util.PropertiesUtil;
-
+/**
+ * 
+ * 开发公司：itboy.net<br/>
+ * 
+ * @author gaozhenchuan
+ * @email gaozhencuan@gmail.com
+ * @version 1.0
+ * 
+ */
 @Controller
 public abstract class BaseController {
 
@@ -48,10 +55,12 @@ public abstract class BaseController {
         request.getSession().setAttribute(MSG_FBSE, message);
         
     }
-    protected void clearMessage(){
+
+    protected void clearMessage() {
         request.getSession().setAttribute(MSG_FBSE, new JSONArray());
     }
-    protected String getMessage(){
+
+    protected String getMessage() {
         JSONArray message=null;
         Object obj = request.getSession().getAttribute(MSG_FBSE);
         if(obj !=null && obj instanceof JSONArray){
@@ -59,9 +68,9 @@ public abstract class BaseController {
         }else{
             message =new JSONArray();
         }
-        return message.toString();     
+        return message.toString();
     }
-    
+
 //    protected void addPopMessage(Message msg){
 //        JSONArray message=null;
 //        JSONObject json = JSONObject.fromObject(msg);
@@ -78,7 +87,9 @@ public abstract class BaseController {
     /**
      * 初始化分页相关信息
      */
-//    protected void initPage(ModelAndView mav, BaseEntity entity,Integer listSize) {
+    protected void initView(ModelAndView mav, Integer listSize) {
+    	
+    }
 //        
 //        // 当前页与每页件数取得
 //        Integer pageNum = entity.getPageNum();
@@ -115,20 +126,7 @@ public abstract class BaseController {
      * 获取当前国际化语言
      */
     protected Locale getLocale(HttpServletRequest request) {
-        Locale locale = RequestContextUtils.getLocaleResolver(request).resolveLocale(request);
-        return locale;
-    }
-    
-    /**
-     * 获取当前国际化语言
-     */
-    protected Locale getLocale() {
-        String language = PropertiesUtil.getPropertyValue("language");
-        if(language.equals("japan")){
-            return Locale.JAPAN;
-        }else{
-            return Locale.CHINA;
-        }
+        return RequestContextUtils.getLocaleResolver(request).resolveLocale(request);
     }
 
     /**
