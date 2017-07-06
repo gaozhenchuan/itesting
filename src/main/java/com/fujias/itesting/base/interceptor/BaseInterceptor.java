@@ -3,10 +3,13 @@ package com.fujias.itesting.base.interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 public class BaseInterceptor implements HandlerInterceptor {
+
+    private static final String access_token = "access_token";
 
     /** 
      * preHandle方法是进行处理器拦截用的，顾名思义，该方法将在Controller处理之前进行调用，SpringMVC中的Interceptor拦截器是链式的，可以同时存在 
@@ -16,7 +19,17 @@ public class BaseInterceptor implements HandlerInterceptor {
      */
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        return false;
+        String user = (String) request.getSession().getAttribute(access_token);
+
+        // Ajax请求
+        if (request.getHeader("x-requested-with") != null
+                && request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest")){ 
+            return StringUtils.isEmpty(user);
+        } else {
+            // 跳转到登录界面 
+            request.getRequestDispatcher("/index.do").forward(request, response);
+        }
+        return false;  
     }
 
     /** 
