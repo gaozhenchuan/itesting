@@ -11,38 +11,7 @@
       <struts.version>2.3.16.3</struts.version>
       <cxf.version>3.0.2</cxf.version>
   </properties>
-  
-  <build>  
-    <directory>target</directory>  
-    <outputDirectory>target/classes</outputDirectory>  
-    <finalName>${project.artifactId}-${project.version}</finalName>  
-    <testOutputDirectory>target/test-classes</testOutputDirectory>  
-    <sourceDirectory>src/main/java</sourceDirectory>  
-    <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
-    <testSourceDirectory>src/test/java</testSourceDirectory>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
-    <testResources>
-      <testResource>
-        <directory>src/test/resources</directory>
-      </testResource>
-    </testResources>
-    <pluginManagement>
-        <plugins>
-            <plugin> 
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-        </plugins>
-    </pluginManagement> 
-   </build>
+    
   <dependencies>
   
     <dependency>
@@ -172,13 +141,6 @@
         <version>0.9.1.2</version>
     </dependency>
     
-    <dependency>
-        <groupId>commons-dbcp</groupId>
-        <artifactId>commons-dbcp</artifactId>
-        <version>1.4</version>
-    </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
     <dependency>
         <groupId>commons-dbcp</groupId>
         <artifactId>commons-dbcp</artifactId>
