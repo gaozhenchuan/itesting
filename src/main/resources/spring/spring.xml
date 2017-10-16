@@ -13,7 +13,6 @@
     http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
     <!-- 引入属性文件 -->
-    
     <import resource="spring-mybatis.xml"/>
     <import resource="spring-locale.xml"/>
     <import resource="spring-mvc.xml"/>
